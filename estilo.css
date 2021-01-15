@@ -1,0 +1,33 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 15px;
+
+}
+
+body{
+    background-color:antiquewhite;
+    widows: 100%;
+    min-width: 100vh;
+    margin: 0%;
+    display: flex;
+    justify-self: center;
+
+}
+.formulario{
+    display: flex;
+}
+
+.titulo{
+    position: absolute;
+    top: 30px;
+    left: 37%;
+    text-align: center;
+    width: 70vh;
+    height: 100vh; /*faz tumar toda tela*/
+   
+    background-color: aqua;
+}
