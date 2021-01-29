@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $categoria =[];
 $categoria [] = "infantio";
 $categoria [] = "adolecente";
@@ -6,8 +8,9 @@ $categoria [] ="adulto";
 $nome =$_POST['nome'];
 $idade =$_POST['idade'];
 if (empty($nome)){ //empty feriifica se a variavel esta vazia
-    echo 'O nome não pode ser vazio';
-    return;
+    $_SESSION['MensagemErro'] = 'nome não pode ser vazio, por favor preencha o novamente '; //array açossiativo e arry numeroco
+    header(string:'location: index.php');
+    
 }
 if(strlen($nome) < 3){           //strlen conta quantas caracterias tem na strings
     echo 'O nome deve conter mais que 3 caracter';
