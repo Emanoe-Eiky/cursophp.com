@@ -19,7 +19,11 @@ session_start();
      <br>
 <form action="script.php" method="post">
      <?php 
-        $MensagemDeErro = isset($_SESSION['MensagemErro']) ? $_SESSION['MensagemErro'] : '';
+     $MensagemSuceso = isset($_SESSION['MensagemSuceso']) ? $_SESSION['MensagemSuceso'] : '';
+     if(!empty($MensagemSuceso)){
+        echo $MensagemSuceso;
+    }
+        $MensagemDeErro = isset($_SESSION['MensagemDeErro']) ? $_SESSION['MensagemDeErro'] : '';
          if(!empty($MensagemDeErro)){
             echo $MensagemDeErro;
         }
