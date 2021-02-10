@@ -1,4 +1,6 @@
-
+<?php
+include "servicos/ServicoMensagemSessao.php";
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,7 +8,7 @@
     <meta name="author" content="">
     <meta name="description" content="">
     <meta name="viewport" content="Width=device-width, initial-scale=1">
-    <link rel= "stylesheet" href="estilo.css">
+    <link rel= "stylesheet" href="">
     <title>FORMULARIO</title>
 </head>
 <body>
@@ -14,23 +16,27 @@
     <div class="">
     <br/>
     <p>FORMULARIO PARA INSCRIÇÃO DE COMPETIDORES</p>
-    </div> <br>
+ 
 <form action="script.php" method="post">
-
-    <div>
+    <?php
+        $MensagemErro = obterMensagemErro();
+        if (!empty($MensagemErro)){
+            echo $MensagemErro;
+        }
+        $MensagemSucesso = obterMensagemSucesso();
+        if(!empty($MensagemSucesso)){
+            echo $MensagemSucesso;
+        }
+    ?>
     <p>Seu nome <input type="text" name="nome"/></p>
-    </div><br/>
-
-    <div>
+  
     <p>Sua idade <input type="text" name="idade"/></p>
-    </div><br/>
-
-    <div>
+ 
     <p> <input type="submit" value="Envie seus dados"/></p>
-    </div>
+   
    
 
 </form>
-</div>
+
 </body>
 </html>
