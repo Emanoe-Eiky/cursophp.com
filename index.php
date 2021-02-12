@@ -12,9 +12,6 @@ include "servicos/ServicoMensagemSessao.php";
     <title>FORMULARIO</title>
 </head>
 <body>
-  <div class="titulo">
-    <div class="">
-    <br/>
     <p>FORMULARIO PARA INSCRIÇÃO DE COMPETIDORES</p>
  
 <form action="script.php" method="post">
@@ -26,11 +23,11 @@ include "servicos/ServicoMensagemSessao.php";
         $MensagemSucesso = obterMensagemSucesso();
         if(!empty($MensagemSucesso)){
             echo $MensagemSucesso;
-        }
+        }                                                               
     ?>
     <p>Seu nome <input type="text" name="nome"/></p>
   
-    <p>Sua idade <input type="text" name="idade"/></p>
+    <p>Sua idade <input type="text" name="idade"/></p>  
  
     <p> <input type="submit" value="Envie seus dados"/></p>
    
